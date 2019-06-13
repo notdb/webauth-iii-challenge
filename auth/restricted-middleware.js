@@ -5,6 +5,7 @@ const secrets = require("../config/secret.js");
 
 module.exports = (req, res, next) => {
   const token = req.headers.authorization;
+  // const token2 = localStorage.getItem("jwt");
 
   if (token) {
     jwt.verify(token, secrets.jwtSecret, (err, decodeToken) => {
