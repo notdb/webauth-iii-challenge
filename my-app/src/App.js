@@ -5,6 +5,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import Login from "./components/Signup.js";
+import Signup from "./components/Signin.js";
 
 class App extends React.Component {
   render() {
@@ -13,11 +14,13 @@ class App extends React.Component {
         <header>
           <nav>
             <NavLink to="/login">Login</NavLink>
+            <NavLink to="/signup">Sign up</NavLink>
             <button onClick={this.logout}>Logout</button>
           </nav>
         </header>
         <main>
           <Route path="/login" component={Login} />
+          <Route path="/signup" component={Signup} />
         </main>
       </div>
     );
